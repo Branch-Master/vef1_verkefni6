@@ -54,8 +54,7 @@ html::before {
 main {
   margin: 0 auto;
   max-width: 1450px;
-  padding-left: 20px;
-  padding-right: 20px;
+  
 }
 
 
@@ -92,7 +91,7 @@ h1 {
   /*flex-direction: column;*/
   justify-content: space-around;
   flex-wrap: wrap;
-  width:1450px;
+ /* width:1450px;*/
   margin-left: -10px;
   margin-right: -10px;
 }
@@ -103,10 +102,8 @@ h1 {
   padding-left: 10px;*/
 }
 
-.col-12 {
-  max-width: 100%;
-}
-.col-6{
+
+.col-sm-6{
  max-width:50%;
 }
 .col-sm-12 {
@@ -115,14 +112,35 @@ h1 {
 .col-sm-6 {
   max-width: 50%;
 }
-.col-sm-3 {
-  max-width: 25%;
-}
-.offset-sm-0 {
-  margin-left: 0;
+@media(max-width:1490px){
+  
+  main{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
+@media (max-width:1000px){
 
+  .col-12 {
+    width: 100%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+}
+
+@media(max-width: 700px){
+  
+  .col-sm-12 {
+    max-width: 100%;
+  }
+
+  
+
+}
+
+@media(min-width:500)
 /* TODO setja upp grid fyrir >= 1000px */
 
 /* TODO koma mynd fyrir á öðrum stað í < 1000px */
