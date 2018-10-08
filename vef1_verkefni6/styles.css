@@ -57,8 +57,6 @@ h1 {
 
 .grid__col {
   width: 100%;
-  /*padding-right: 10px;
-  padding-left: 10px;*/
 }
 
 
@@ -68,6 +66,7 @@ h1 {
     padding-left: 20px;
     padding-right: 20px;
   }
+
 }
 
 @media(min-width:1000px){
@@ -78,25 +77,36 @@ h1 {
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-    margin-left: -10px;
-    margin-right: -10px;
   }
 
-  .col-text{
+  .col-text:nth-child(odd){
     max-width: 50%;
     margin-bottom: 40px;
+    padding-right:10px;
   }
-  .col-img{
+
+  .col-text:nth-child(even){
+    max-width: 50%;
+    margin-bottom: 40px;
+    padding-left:10px;
+  }
+
+  .col-img:nth-child(odd){
     max-width: 50%;
     margin-bottom:40px;
+    padding-right:10px;
   }
+
+  .col-img:nth-child(even){
+    max-width: 50%;
+    margin-bottom:40px;
+    padding-left:10px;
+  }
+
   .card__col{
     max-width: 33.33333%;
   }
 
-  .grid__col{
-    padding:0px;
-  }
 }
 
 @media(max-width:1000px){
@@ -110,14 +120,13 @@ h1 {
     max-width: 50%;
   }
 
-  
 }
 
 @media(min-width:700px){
 
-.cards{
+  .cards{
   margin-bottom: 40px;
-}
+  }
 
   .card{
     padding: 10px;
@@ -130,21 +139,19 @@ h1 {
     border-radius: 5px;
   }
 
-
-  .card__image {
+  .card__image{
     padding-left: 20px;
     flex: 0 0 150px;
     }
 
-
-
-}
+  }
 
 @media(max-width:700px){
   
   .col-text{
     max-width: 100%;
   }
+
   .col-img{
     max-width:100%;
   }
@@ -160,15 +167,12 @@ h1 {
   }
 
   .card{
-    
     display: flex;
     flex-direction: column;
-
     margin-bottom: 20px;
     padding-bottom: 10px;
     width: 100%;
     max-width: 470px;
-    
     overflow: hidden;
     border-bottom: 2px solid #aaa;
   }
@@ -177,9 +181,11 @@ h1 {
     flex-direction: column;
     max-width: 100%;
   }
+
   .card__text{
     margin-bottom: 16px;
   }
+
   .card__image{
     width: 100%;
   }
@@ -194,65 +200,57 @@ h1 {
 /* grid fyrir cards */
 
 
-.cards {
+.cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-
-    
-  }
-
-.card {
-    display: flex;
-    flex-direction: column;
-
-    margin-bottom: 10px;
-    width: 100%;
-    max-width: 470px;
-    
+    justify-content: space-around;  
 }
 
-.card__title {
+.card{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 470px;
+}
+
+.card__title{
   margin-bottom: 20px;
-  
   font-size: 1.375em;
   line-height: 1;
   word-break: break-word;
-  }
+}
 
-  
-.card__content {
+.card__content{
   display: flex;
   flex: 1;
-  }
+}
   
-
-.card__text {
+.card__text{
   font-size: 1em;
   line-height: 1.375;
   overflow: auto;
   word-break: break-word;
 }
-   /*
+   
 
-   */
-.card__img {
+   
+.card__img{
   max-width: 100%;
-  }
+}
 
-.card__tags {
+.card__tags{
   margin-top:10px;
   display:flex;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
   align-items: center;
-
   list-style: none;
-  }
+}
 
-.card__tag {
+.card__tag{
   font-weight: bold;
   margin-right: 10px;
-  }
+}
 
 
 
